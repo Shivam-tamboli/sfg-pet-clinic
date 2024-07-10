@@ -1,6 +1,10 @@
-HELP.md
+# Ignore target directory
 target/
+
+# Allow Maven wrapper jar
 !.mvn/wrapper/maven-wrapper.jar
+
+# Exclude target directories under src/main and src/test
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -25,9 +29,12 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# Ignore build directories except under src/main and src/test
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
+    
