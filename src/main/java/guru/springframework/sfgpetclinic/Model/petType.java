@@ -1,6 +1,4 @@
 package guru.springframework.sfgpetclinic.Model;
-import lombok.Getter;
-import lombok.Setter;
 public class petType {
 
     private String name;
