@@ -1,4 +1,5 @@
-package guru.springframework.sfgpetclinic.Model;
+package guru.springframework.sfgpetclinic.model;
+
 
 public class Person {
     // Private attributes (fields)
