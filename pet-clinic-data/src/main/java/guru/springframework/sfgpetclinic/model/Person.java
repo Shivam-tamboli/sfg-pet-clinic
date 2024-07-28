@@ -1,25 +1,26 @@
 package guru.springframework.sfgpetclinic.model;
 
+import lombok.Getter;
+import lombok.Setter;
 
-public class Person  extends BaseEntity{
-    // Private attributes (fields)
+/**
+ * Represents a person with a first name and a last name.
+ * This class extends {@link BaseEntity} to include an ID field.
+ */
+
+@Getter
+@Setter
+public class Person extends BaseEntity {
+
+    /**
+     * The first name of the person.
+     */
     private String firstName;
+
+    /**
+     * The last name of the person.
+     */
     private String lastName;
 
-    // Public getter and setter methods to access and update the private fields
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    // Lombok will generate getters and setters for firstName and lastName
 }

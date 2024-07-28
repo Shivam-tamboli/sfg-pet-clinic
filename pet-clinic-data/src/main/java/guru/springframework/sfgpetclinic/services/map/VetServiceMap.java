@@ -2,7 +2,7 @@ package guru.springframework.sfgpetclinic.services.map;
 
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.services.CrudService;
-import net.bytebuddy.implementation.bind.annotation.Super;
+
 
 import java.util.Set;
 
@@ -13,8 +13,8 @@ public class VetServiceMap extends AbstractMapService<Vet , Long> implements Cru
     }
 
     @Override
-    public Vet findById(Long aLong) {
-        return null;
+    public Vet findById(Long id) {
+        return super.findById(id);
     }
 
     @Override
