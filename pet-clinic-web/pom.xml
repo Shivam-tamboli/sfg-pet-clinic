@@ -14,7 +14,6 @@
     <artifactId>pet-clinic-web</artifactId>
 
     <dependencies>
-        <!-- Web Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -34,11 +33,13 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <!-- Add pet-clinic-data dependency -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
+            <groupId>guru.springframework</groupId>
+            <artifactId>pet-clinic-data</artifactId>
+            <version>${project.version}</version>
         </dependency>
+        <!-- No need to redefine common dependencies like lombok here -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
