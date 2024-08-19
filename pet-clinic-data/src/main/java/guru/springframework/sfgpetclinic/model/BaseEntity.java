@@ -2,8 +2,6 @@ package guru.springframework.sfgpetclinic.model;
 
 import java.io.Serializable;
 
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Base entity class with an ID field.
@@ -11,9 +9,15 @@ import lombok.Setter;
  * ensure to override methods with caution to maintain the integrity of the ID field.</p>
  */
 
-@Getter
-@Setter
-public class BaseEntity implements Serializable {
 
+public class BaseEntity {
     private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

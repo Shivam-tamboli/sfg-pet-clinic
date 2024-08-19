@@ -7,7 +7,7 @@
     <parent>
         <groupId>guru.springframework</groupId>
         <artifactId>sfg-pet-clinic</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.5-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -19,8 +19,8 @@
         <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
         <webjars-jquery.version>2.2.4</webjars-jquery.version>
         <wro4j.version>1.8.0</wro4j.version>
+        <minimatch.version>3.0.4</minimatch.version> <!-- Added minimatch version -->
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -80,11 +80,23 @@
             <version>${webjars-bootstrap.version}</version>
         </dependency>
         <!-- end of webjars -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.23.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Add minimatch as a direct dependency -->
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>minimatch</artifactId>
+            <version>${minimatch.version}</version>
         </dependency>
     </dependencies>
 
@@ -93,7 +105,7 @@
             <plugin>
                 <groupId>ro.isdc.wro4j</groupId>
                 <artifactId>wro4j-maven-plugin</artifactId>
-                <version>${wro4j.version}</version>
+                <version>1.10.1</version>
                 <executions>
                     <execution>
                         <phase>generate-resources</phase>
@@ -115,10 +127,31 @@
                         <artifactId>bootstrap</artifactId>
                         <version>${webjars-bootstrap.version}</version>
                     </dependency>
-
+                    <!-- Exclude conflicting minimatch dependencies -->
+                    <dependency>
+                        <groupId>org.webjars.npm</groupId>
+                        <artifactId>jshint</artifactId>
+                        <version>2.11.0</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.webjars.npm</groupId>
+                                <artifactId>minimatch</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.webjars.npm</groupId>
+                        <artifactId>cli</artifactId>
+                        <version>[1.0.0,1.1]</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.webjars.npm</groupId>
+                                <artifactId>minimatch</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
     </build>
 </project>
-
