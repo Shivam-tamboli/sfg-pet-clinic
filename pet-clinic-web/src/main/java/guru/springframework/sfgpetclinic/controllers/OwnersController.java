@@ -20,4 +20,10 @@ public class OwnersController {
         model.addAttribute("owners" , ownerService.findAll());
         return "owners/index"; // This should match the location of your HTML file
     }
+
+    @RequestMapping("/find")
+    public String findOwners(){
+
+        return "notimplemented";
+    }
 }
