@@ -4,16 +4,16 @@ import java.time.LocalDate;
 
 public class Pet extends BaseEntity{
     // Private attributes (fields)
-    private petType PetType;
+    private guru.springframework.sfgpetclinic.model.PetType PetType;
     private Owner owner;
     private LocalDate birthDate;
 
     // Public getter and setter methods to access and update the private fields
-    public petType getPetType() {
+    public guru.springframework.sfgpetclinic.model.PetType getPetType() {
         return PetType;
     }
 
-    public void setPetType(petType petType) {
+    public void setPetType(guru.springframework.sfgpetclinic.model.PetType petType) {
         PetType = petType;
     }
 
