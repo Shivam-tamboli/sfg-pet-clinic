@@ -1,23 +1,20 @@
 package guru.springframework.sfgpetclinic.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
-
-/**
- * Base entity class with an ID field.
- * <p>This class can be extended to create entities with an ID field. When extending,
- * ensure to override methods with caution to maintain the integrity of the ID field.</p>
- */
-
-
-public class BaseEntity {
+@Getter
+@Setter
+@MappedSuperclass
+public class BaseEntity implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
