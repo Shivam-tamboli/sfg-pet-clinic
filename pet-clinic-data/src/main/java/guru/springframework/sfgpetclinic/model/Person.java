@@ -1,26 +1,19 @@
 package guru.springframework.sfgpetclinic.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * Represents a person with a first name and a last name.
- * This class extends {@link BaseEntity} to include an ID field.
- */
 
 @Getter
 @Setter
+@MappedSuperclass
 public class Person extends BaseEntity {
 
-    /**
-     * The first name of the person.
-     */
+    @Column(name = "first_name")
     private String firstName;
-
-    /**
-     * The last name of the person.
-     */
+    @Column(name = "last_name")
     private String lastName;
 
-    // Lombok will generate getters and setters for firstName and lastName
 }
