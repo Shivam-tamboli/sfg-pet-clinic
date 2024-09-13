@@ -38,5 +38,6 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- No need to add javaee-api dependency here since it's in the parent POM -->
     </dependencies>
 </project>

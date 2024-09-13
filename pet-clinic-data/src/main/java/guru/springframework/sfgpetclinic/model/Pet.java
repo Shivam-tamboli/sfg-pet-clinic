@@ -1,9 +1,9 @@
 package guru.springframework.sfgpetclinic.model;
 import java.util.HashSet;
 import java.util.Set;
-import jakarta.persistence.Column;
-import jakarta.persistence.ManyToOne ;
-import jakarta.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.ManyToOne ;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
