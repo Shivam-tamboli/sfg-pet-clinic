@@ -4,14 +4,17 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne ;
 import javax.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+//@Builder
 @Table(name = "pets")
 public class Pet extends BaseEntity {
 

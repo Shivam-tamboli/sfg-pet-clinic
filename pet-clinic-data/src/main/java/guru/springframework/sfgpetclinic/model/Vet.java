@@ -1,8 +1,7 @@
 package guru.springframework.sfgpetclinic.model;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,6 +10,7 @@ import java.util.Set;
 @Getter
 @Setter
 
+//@Builder
 @Entity
 @Table(name = "vets")
 public class Vet extends Person{
