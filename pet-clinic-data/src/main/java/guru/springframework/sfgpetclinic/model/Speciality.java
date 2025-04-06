@@ -6,9 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-/**
- * Created by jt on 7/29/18.
- */
+
 @Setter
 @Getter
 @NoArgsConstructor
